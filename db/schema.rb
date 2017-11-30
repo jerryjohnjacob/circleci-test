@@ -4,7 +4,6 @@ ActiveRecord::Schema.define(version: 20170920110612) do
   enable_extension "plpgsql"
 
   create_table "api_requests", force: :cascade do |t|
-    t.json     "params"
     t.string   "path"
     t.datetime "deleted_at"
     t.datetime "created_at",       null: false
