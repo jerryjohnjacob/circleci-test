@@ -39,7 +39,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "9a:dd:84:fb:3f:89:0b:dd:f2:89:63:09:b7:01:76:d7"
+            - $HEROKU_FINGERPRINT
 
       - run:
           name: Run setup script
