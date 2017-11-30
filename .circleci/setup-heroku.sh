@@ -1,19 +1,13 @@
- #!/bin/bash
-wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
-sudo mkdir -p /usr/local/lib /usr/local/bin
-sudo tar -xvzf heroku-linux-amd64.tar.gz -C /usr/local/lib
-sudo ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
+#!/bin/bash
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 cat > ~/.netrc << EOF
-  machine api.heroku.com
-    login $HEROKU_EMAIL
-    password $HEROKU_TOKEN
-  machine git.heroku.com
-    login $HEROKU_EMAIL
-    password $HEROKU_TOKEN
-  EOF
+machine api.heroku.com
+  login $HEROKU_EMAIL
+  password $HEROKU_TOKEN
+EOF
 
 cat >> ~/.ssh/config << EOF
   VerifyHostKeyDNS yes
   StrictHostKeyChecking no
-  EOF
+EOF
