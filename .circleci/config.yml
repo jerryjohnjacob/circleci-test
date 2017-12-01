@@ -4,7 +4,7 @@ version: 2
 jobs:
   build:
     docker:
-       - image: circleci/ruby:2.3
+       - image: circleci/ruby:2.4
          environment:
            RAILS_ENV: test
 
@@ -30,7 +30,7 @@ jobs:
 
   deploy-staging:
     docker:
-       - image: circleci/ruby:2.3
+       - image: circleci/ruby:2.4
 
     working_directory: ~/circleci-test
 

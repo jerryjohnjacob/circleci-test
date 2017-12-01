@@ -1,5 +1,3 @@
-require "spec_helper"
-
 RSpec.describe "temp" do
   describe "temp test" do
     it "returns true" do
