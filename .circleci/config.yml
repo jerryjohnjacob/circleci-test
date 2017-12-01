@@ -16,7 +16,6 @@ jobs:
       - run:
           name: Bundler
           command: |
-            gem install bundler --no-ri --no-rdoc
             bundle install
 
       - run:
